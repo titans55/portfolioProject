@@ -1,0 +1,46 @@
+{% load static %}
+
+<html>
+
+<head>
+    <title>Entrance</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'portfolio/css/landingPage.css' %}" type="text/css">
+
+</head>
+<body>
+   
+    
+
+  
+    <div class="row vertical-center">
+        <div class="col"></div>
+        <div class="col text-center">
+            <img class="gateOfMoriaImg" src="{% static 'portfolio/img/gateOfMoria.jpg' %}" >
+            <video id="entranceVideo" style="display: none;">
+                <source src="{% static 'portfolio/video/moriaEntrance.mp4' %}" type="video/mp4">
+            </video>
+        </div>
+        <div class="col"></div>
+        <div class="myCustomText">
+            <div class="row text-center">
+                speak, friend, and enter?
+            </div>
+            <div class="row text-center" >
+                <input class="customInput " id="riddle" type="text" autocomplete="off" style="text-align:center" size="18" autofocus>
+            </div>
+        </div>
+        
+    </div>
+    <div id="fog"></div>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'portfolio/js/landingPage.js' %}"></script>
+
+
+</body>
+
+</html>
