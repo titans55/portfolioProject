@@ -82,7 +82,7 @@ body {
 
 @font-face {
   font-family: 'MorrisRoman-Black';
-  src: url('http://kutayaslanportfolio.pythonanywhere.com/static/portfolio/fonts/morris-roman/MorrisRoman-Black.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  src: url('https://kutayaslanportfolio.pythonanywhere.com/static/portfolio/fonts/morris-roman/MorrisRoman-Black.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }  
 
 .customInput{
