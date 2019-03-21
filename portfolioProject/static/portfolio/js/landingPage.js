@@ -28,7 +28,7 @@ function verifyFriend(){
     let csrftoken = getCookie('csrftoken');
     $.ajax({
         type: 'POST',
-        url: '/verifyFriend',
+        url: 'verifyFriend',
         data: {
             csrfmiddlewaretoken: csrftoken 
         },

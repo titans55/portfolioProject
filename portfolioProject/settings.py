@@ -27,7 +27,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 SECRET_KEY = '(pn65hv*&r&%6@%zpq(1+g(&w@qe8t@hips_xdpl=z76r26$hu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django_user_agents.middleware.UserAgentMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
