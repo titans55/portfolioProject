@@ -28,7 +28,7 @@ SECRET_KEY = '(pn65hv*&r&%6@%zpq(1+g(&w@qe8t@hips_xdpl=z76r26$hu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
+SITE_URL = 'https://kutayaslanportfolio.pythonanywhere.com'
 ALLOWED_HOSTS = ['*']
 
 

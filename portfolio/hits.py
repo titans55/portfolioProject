@@ -66,15 +66,18 @@ import re, socket
 from django.conf import settings
 
 
+domain_re = re.compile('^(http|https):\/\/?([^\/]+)')
+domain = domain_re.match(settings.SITE_URL).group(2)
+
 def getUserCountry(ip):
-    url = "http://api.wipmania.com/" + ip 
+    url = "http://api.wipmania.com/" + ip + "?" + domain
     socket.setdefaulttimeout(5)
-    headers = {'Typ':'django','Ver':'1.1.1','Connection':'Close'}
+    headers = {'Typ':'django','Ver':'1.0','Connection':'Close'}
     try:
         req = Request(url, None, headers)
         urlfile = urlopen(req)
         land = urlfile.read()
         urlfile.close()
         return land[:2]
-    except Exception:
+    except Exception as e:
         return "XX"
