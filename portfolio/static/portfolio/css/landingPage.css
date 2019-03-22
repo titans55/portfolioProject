@@ -4,8 +4,35 @@ body {
     overflow: hidden
 }
 
+.customInput{
+  background-color: transparent!important;
+  border: none!important;
+  border-bottom: 1px solid #9e9e9e!important;
+  color: gray;
+  border-radius: 0!important;
+  outline: none!important;
+  height: 3rem!important;
+  font-size: 100%!important;
+  margin: 0 0 8px 0!important;
+  padding: 0!important;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+  -webkit-box-sizing: content-box!important;
+  box-sizing: content-box!important;
+  -webkit-transition: border .3s, -webkit-box-shadow .3s!important;
+  transition: border .3s, -webkit-box-shadow .3s!important;
+  transition: box-shadow .3s, border .3s!important;
+  transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s!important;
+}
+
+
 @media (min-width: 1281px) {
-  
+  .myCustomText{
+    position: absolute;
+    top: 87%;
+    left: 46%;
+    font-family: 'MorrisRoman-Black';
+  }
   
 }
 
@@ -14,7 +41,12 @@ body {
   ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
-  
+  .myCustomText{
+    position: absolute;
+    top: 87%;
+    left: 46%;
+    font-family: 'MorrisRoman-Black';
+  }
   
 }
 
@@ -26,6 +58,39 @@ body {
   video {
     width: 50vh;
     height: auto;
+  }
+  .gateOfMoriaImg {
+    width: 55vh!important;
+  }
+
+  .myCustomText {
+    position: absolute;
+    top: 78%;
+    left: 29%;
+    font-family: 'MorrisRoman-Black';
+    font-size: 292%;
+  }
+
+  .customInput {
+    background-color: transparent!important;
+    border: none!important;
+    border-bottom: 1px solid #9e9e9e!important;
+    color: gray;
+    border-radius: 0!important;
+    outline: none!important;
+    height: 5rem!important;
+    font-size: 100%!important;
+    margin: 0 0 8px 0!important;
+    padding: 0!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    -webkit-box-sizing: content-box!important;
+    box-sizing: content-box!important;
+    -webkit-transition: border .3s, -webkit-box-shadow .3s!important;
+    transition: border .3s, -webkit-box-shadow .3s!important;
+    transition: box-shadow .3s, border .3s!important;
+    width: 130%;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s!important;
   }
 }
 
@@ -44,7 +109,38 @@ body {
     width: 50vh;
     height: auto;
   }
-  
+  .gateOfMoriaImg {
+    width: 55vh!important;
+  }
+
+  .myCustomText {
+    position: absolute;
+    top: 78%;
+    left: 29%;
+    font-family: 'MorrisRoman-Black';
+    font-size: 292%;
+  }
+  .customInput {
+    background-color: transparent!important;
+    border: none!important;
+    border-bottom: 1px solid #9e9e9e!important;
+    color: gray;
+    border-radius: 0!important;
+    outline: none!important;
+    height: 5rem!important;
+    font-size: 100%!important;
+    margin: 0 0 8px 0!important;
+    padding: 0!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    -webkit-box-sizing: content-box!important;
+    box-sizing: content-box!important;
+    -webkit-transition: border .3s, -webkit-box-shadow .3s!important;
+    transition: border .3s, -webkit-box-shadow .3s!important;
+    transition: box-shadow .3s, border .3s!important;
+    width: 130%;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s!important;
+  }
 }
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
@@ -54,6 +150,40 @@ body {
   video {
     width: 50vh;
     height: auto;
+  }
+  .gateOfMoriaImg {
+    width: 55vh!important;
+  }
+
+  .myCustomText {
+    position: absolute;
+    top: 78%;
+    left: 29%;
+    font-family: 'MorrisRoman-Black';
+    font-size: 292%;
+
+  }
+
+  .customInput {
+    background-color: transparent!important;
+    border: none!important;
+    border-bottom: 1px solid #9e9e9e!important;
+    color: gray;
+    border-radius: 0!important;
+    outline: none!important;
+    height: 5rem!important;
+    font-size: 100%!important;
+    margin: 0 0 8px 0!important;
+    padding: 0!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    -webkit-box-sizing: content-box!important;
+    box-sizing: content-box!important;
+    -webkit-transition: border .3s, -webkit-box-shadow .3s!important;
+    transition: border .3s, -webkit-box-shadow .3s!important;
+    transition: box-shadow .3s, border .3s!important;
+    width: 130%;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s!important;
   }
 }
 
@@ -65,12 +195,7 @@ body {
     align-items: center;
 }
 
-.myCustomText{
-    position: absolute;
-    top: 87%;
-    left: 46%;
-    font-family: 'MorrisRoman-Black';
-}
+
 
 .entranceVideo{
   position: fixed; right: 0; bottom: 0;
@@ -85,26 +210,6 @@ body {
   src: url('https://kutayaslanportfolio.pythonanywhere.com/static/portfolio/fonts/morris-roman/MorrisRoman-Black.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }  
 
-.customInput{
-  background-color: transparent!important;
-  border: none!important;
-  border-bottom: 1px solid #9e9e9e!important;
-  color: gray;
-  border-radius: 0!important;
-  outline: none!important;
-  height: 3rem!important;
-  font-size: 16px!important;
-  margin: 0 0 8px 0!important;
-  padding: 0!important;
-  -webkit-box-shadow: none!important;
-  box-shadow: none!important;
-  -webkit-box-sizing: content-box!important;
-  box-sizing: content-box!important;
-  -webkit-transition: border .3s, -webkit-box-shadow .3s!important;
-  transition: border .3s, -webkit-box-shadow .3s!important;
-  transition: box-shadow .3s, border .3s!important;
-  transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s!important;
-}
 
 
 #fog {
