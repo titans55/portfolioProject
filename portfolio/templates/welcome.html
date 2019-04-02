@@ -70,7 +70,9 @@
         <div class="subheading mb-5">Software Developer ·
           <a href="kutay.aslan@sakarya.edu.tr">kutay.aslan@sakarya.edu.tr</a>
         </div>
-        <p class="lead mb-5">Philomath, Adaptive </p>
+        {% for about in data.abouts %}
+        <p class="lead mb-5">{{about.about}}</p>
+        {% endfor %}
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/kutay-aslan-8137a7155/">
             <i class="fab fa-linkedin-in"></i>
@@ -88,29 +90,19 @@
       <div class="w-100">
         <h2 class="mb-5">Experience</h2>
 
+        {% for experience in data.experiences %}
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3 class="mb-0">Remote Full Stack Developer</h3>
-            <div class="subheading mb-3">CYBERRATS(SSGC)</div>
-            <p>Working on a (Django REST framework) REST API analysing crime data throughout the UK. The client, written in Angular presents the results in a form of a visualisation dashboard.</p>
+              
+            <h3 class="mb-0">{{experience.header|default_if_none:""}}</h3>
+            <div class="subheading mb-3">{{experience.subheader|default_if_none:""}}</div>
+            <p>{{experience.description|default_if_none:""}}</p>
           </div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">February 2019 - Present</span>
+            <span class="text-primary">{{experience.startedAt|default_if_none:""}} - {{experience.endedAt|default_if_none:""}}</span>
           </div>
         </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Software Developer Intern</h3>
-            <div class="subheading mb-3">SSGC (Erasmus Internship)</div>
-            <!-- <p></p> -->
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2018 - February 2019</span>
-          </div>
-        </div>
-      </div>
-
+        {% endfor %}
     </section>
 
     <hr class="m-0">
@@ -119,27 +111,18 @@
       <div class="w-100">
         <h2 class="mb-5">Education</h2>
 
+        {% for education in data.educations %}
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3 class="mb-0">Sakarya University</h3>
-            <div class="subheading mb-3">Information Systems Engineering</div>
-            <!-- <p>GPA: 3.23</p> -->
+            <h3 class="mb-0">{{education.header|default_if_none:""}}</h3>
+            <div class="subheading mb-3">{{education.subheader|default_if_none:""}}</div>
+            <p>{{education.description|default_if_none:""}}</p>
           </div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">September 2015 - December 2019(Expected)</span>
+            <span class="text-primary">{{education.startedAt|default_if_none:""}} - {{education.endedAt|default_if_none:""}}</span>
           </div>
         </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">University of Rzeszów</h3>
-            <div class="subheading">Computer Science</div>
-            <div>Erasmus+ Study Mobilty</div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">February 2017 - August 2017</span>
-          </div>
-        </div>
+        {% endfor %}
 
       </div>
     </section>
@@ -152,79 +135,21 @@
 
         <div class="subheading mb-3">Programming Languages &amp; Tehchnologies</div>
         <ul class="list-inline dev-icons">
+          {% for plAndTech in data.plAndTechs %}
           <li class="list-inline-item">
-            <span class="badge badge-secondary">Python</span>
+            <span class="badge badge-secondary">{{plAndTech.name}}</span>
           </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">PHP</span>
-          </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">C#</span>
-          </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">Django</span>
-          </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">CodeIgniter</span>
-          </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">Angular</span>
-          </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">TypeScript</span>
-          </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">Html/CSS/SASS</span>
-          </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">JavaScript</span>
-          </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">Firebase</span>
-          </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">MSSQL</span>
-          </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">Celery</span>
-          </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">Redis</span>
-          </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">RabbitMQ</span>
-          </li>
-          <li class="list-inline-item">
-            <span class="badge badge-secondary">WebSockets</span>
-          </li>
+          {% endfor %}
 
         </ul>
         <div class="subheading mb-3">Workflow</div>
         <ul class="fa-ul mb-0">
+          {% for workflow in data.workflows %}
           <li>
               <i class="fa-li fa fa-check"></i>
-              Back-end Frameworks to Build Server-side Software
+              {{workflow.description}}
           </li>
-          <li>
-              <i class="fa-li fa fa-check"></i>
-              Production and Maintenance of Web Application User Interfaces
-          </li>
-          <li>
-              <i class="fa-li fa fa-check"></i>
-              Mobile-First, Responsive Design
-          </li>
-          <li>
-              <i class="fa-li fa fa-check"></i>
-              Database Creation and Management
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Data Visualisation
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Debugging
-          </li>
+          {% endfor %}
         </ul>
       </div>
     </section>
@@ -234,8 +159,9 @@
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
       <div class="w-100">
         <h2 class="mb-5">Interests</h2>
-        <p>Apart from being a web developer, I enjoy most of my time playing musical instruments such as guitar and baglama. And as Outdoors i'm into hiking and camping.</p>
-        <!-- <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p> -->
+        {% for interest in data.interests %}
+        <p>{{interest.description}}</p>
+        {% endfor %}
       </div>
     </section>
 
@@ -288,5 +214,10 @@
   <script type="text/javascript" src="{% static 'portfolio/welcome/js/resume.js' %}"></script>
 
 </body>
+<script>
+  var x = "{{data.experiences}}"
+  console.log(x)
+
+</script>
 
 </html>
