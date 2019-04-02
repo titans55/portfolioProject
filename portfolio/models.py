@@ -19,7 +19,7 @@ class Hit(models.Model):
     bot = models.BooleanField(null=True)
 
     def __str__(self):
-        return self.time
+        return str(self.time)
 
 class Experience(models.Model):
     header = models.CharField(max_length=200, null=False)
